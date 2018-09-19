@@ -1,4 +1,4 @@
-package zjl.example.com.fuzzyqueryatoz;
+package zjl.example.com.fuzzyqueryatoz.Without;
 
 /**
  *@author xiaobo.cui 2014年11月7日 上午11:24:25

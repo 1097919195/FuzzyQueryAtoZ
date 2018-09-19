@@ -147,6 +147,7 @@ public class ContactsActivity extends Activity {
 			public void run() {
 				try {
 					ContentResolver resolver = getApplicationContext().getContentResolver();
+					//COLLATE LOCALIZED ASC 按本地语言进行排序			https://blog.csdn.net/wssiqi/article/details/8132603（具体参数详解）   下面的sort_key其实就是Phone.SORT_KEY_PRIMARY
 					Cursor phoneCursor = resolver.query(Phone.CONTENT_URI, new String[] { Phone.DISPLAY_NAME, Phone.NUMBER, "sort_key" }, null, null, "sort_key COLLATE LOCALIZED ASC");
 					if (phoneCursor == null || phoneCursor.getCount() == 0) {
 						Toast.makeText(getApplicationContext(), "未获得读取联系人权限 或 未获得联系人数据", Toast.LENGTH_SHORT).show();
